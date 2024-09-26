@@ -238,14 +238,14 @@ kruskal.test(spec_df$amount ~ spec_df$class)
 
 #... Distribution of IS on the map ============================================
 
-cap <- vect("data/cabo_verde/gadm41_CPV_1.shp")
-cap <- project(cap, "EPSG:32626")
+#cap <- vect("cabo_verde/gadm41_CPV_1.shp")
+#cap <- project(cap, "EPSG:32626")
 
 # plot of land cover and sample sites
 pal2 <- c("darkgreen", "grey10", "lightblue", "grey50", "firebrick1", "lightgreen")
 
 plot(lcc2, col = pal2)
-plot(cap, add = TRUE)
+#plot(cap, add = TRUE)
 points(plot_points[plot_points$SOURCE == "IS",], col = "white", cex = 0.5) #, add = TRUE)
 
 ## NB: a complete map can be designed GIS tools or ggplot2/tmap packages
