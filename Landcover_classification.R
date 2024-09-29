@@ -206,7 +206,7 @@ write.csv(df_classes, "data/combined_data.csv")
 
 #... Distribution of species amount ==========================================
 
-# Extract introduced species (IS) information 
+# Extract the introduced species (IS) information 
 spec_df <- df_classes %>% 
   filter(SOURCE == "IS") %>%
   select(PLOT, x, y, class, SPECIES) %>%
@@ -214,7 +214,7 @@ spec_df <- df_classes %>%
   summarise(amount = n())
 head(spec_df)
 
-# Distribution of introduced species
+# Distribution of introduced species amount
 pal1 <- c("darkgreen", "grey10", "grey50", "firebrick1", "lightgreen")
 ggplot(spec_df, aes(x = class, y = amount, fill = class)) +
   geom_boxplot() +
@@ -222,7 +222,7 @@ ggplot(spec_df, aes(x = class, y = amount, fill = class)) +
   #theme_minimal() +
   labs(x = "Landcover", y = "Species amount") 
 
-# The eight frequent introduced species
+# The most eight abundant introduced species
 df_classes %>% 
   filter(SOURCE == "IS") %>%
   group_by(SPECIES) %>% 
@@ -230,7 +230,7 @@ df_classes %>%
   arrange(desc(amount)) %>%
   head(8)
 
-# Test the Significant difference of IS amounts among land cover classes
+# Test the significant difference of IS amounts among land cover classes
 head(spec_df)
 kruskal.test(spec_df$amount ~ spec_df$class)
 # P < 0.001 (there is a significant difference in terms of IS amount)
@@ -248,7 +248,7 @@ plot(lcc2, col = pal2)
 #plot(cap, add = TRUE)
 points(plot_points[plot_points$SOURCE == "IS",], col = "white", cex = 0.5) #, add = TRUE)
 
-## NB: a complete map can be designed GIS tools or ggplot2/tmap packages
+## NB: a complete map can be designed using GIS tools or ggplot2/tmap packages
 
 
 #==============================================================================
