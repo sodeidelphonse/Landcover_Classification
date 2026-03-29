@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Landcover Classification via Sentinel-2 Multispectral Imagery
 
 ## 🛰️ Project Overview
@@ -53,6 +53,4 @@ They can be retrieved via the Copernicus Data Space Ecosystem or Google Earth En
 Developed as a collaborative project during the GeoTraining 2024.
 
 * Team Lead: SODE A. Idelphonse 
-
 * Collaborators: Olajide A.Y., Nakhwala L., Opara A., Opoku M., Barasa C.W.
-
