@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Landcover Classification via Sentinel-2 Multispectral Imagery
 
 ## 🛰️ Project Overview
@@ -54,3 +55,4 @@ Developed as a collaborative project during the GeoTraining 2024.
 * Team Lead: SODE A. Idelphonse 
 
 * Collaborators: Olajide A.Y., Nakhwala L., Opara A., Opoku M., Barasa C.W.
+
